@@ -12,3 +12,9 @@ brew install --no-quarantine supersonic
 ```
 
 The `--no-quarantine` flag is important because Supersonic is distributed without having been [notarized](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution), and therefore will not run without this.
+
+You should also include it when upgrading in future:
+
+```
+brew upgrade --no-quarantine supersonic
+```
