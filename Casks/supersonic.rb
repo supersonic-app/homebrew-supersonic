@@ -5,11 +5,11 @@ cask "supersonic" do
 
   sha256 :no_check
 
-  on_high_sierra do
+  on_catalina :or_older do
     url "https://github.com/dweymouth/supersonic/releases/download/v#{version}/Supersonic-#{version}-mac-legacy-HighSierra-x64.zip"
   end
 
-  on_mojave :or_newer do
+  on_big_sur :or_newer do
     url "https://github.com/dweymouth/supersonic/releases/download/v#{version}/Supersonic-#{version}-mac-#{arch}.zip"
   end
 
