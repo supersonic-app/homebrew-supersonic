@@ -7,7 +7,7 @@ This is a [Homebrew](https://brew.sh/) tap (third-party repository) for [Superso
 To install Supersonic with Homebrew run:
 
 ```sh
-brew tap alexnorton/supersonic
+brew tap supersonic-app/homebrew
 brew install --no-quarantine supersonic
 ```
 
