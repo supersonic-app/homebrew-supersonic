@@ -10,10 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Fetch release version
-        run: |
-          curl -sL https://api.github.com/repos/dweymouth/supersonic/releases/latest | \
-          jq -r ".name" | \
-          sed -i "s/\(version\) .*/\1 \"$(cat)\"/" Casks/supersonic.rb
+        run: | 
+          name=$(curl -sL https://api.github.com/repos/dweymouth/supersonic/releases/latest | jq -r ".name"); \
+          [ "$name" != "null" ] && sed -i "s/\(version\) .*/\1 \"$name\"/" Casks/supersonic.rb
       - name: Check for modified files
         id: git-check
         run: echo ::set-output name=modified::$([ -z "`git status --porcelain`" ] && echo "false" || echo "true")
