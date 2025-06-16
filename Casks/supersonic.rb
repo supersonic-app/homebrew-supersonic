@@ -1,7 +1,7 @@
 cask "supersonic" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.15.2"
+  version "0.16.0"
 
   sha256 :no_check
 
